@@ -12,14 +12,6 @@ module.exports = class Deck {
     return [2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K', "A"].indexOf(a)
 
   }
-
-  static randomize(a) {
-    for (let i = a.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [a[i], a[j]] = [a[j], a[i]];
-    }
-    return a;
-}
   /**
    * cut the deck, get a random card.
    * @param {Bool} remove should be removed
@@ -61,7 +53,13 @@ module.exports = class Deck {
       }
     }
 
-    if(shuffle) this.shuffle();
+    if(shuffle)  {
+     for (let i = this.cards.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [this.cards[i], this.cards[j]] = [this.cards[j], this.cards[i]];
+       
+    } 
+    }
 
   }
 }
