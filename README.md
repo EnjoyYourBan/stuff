@@ -1,2 +1,1 @@
-# stuff
-things ive made that i might go back to
+# [WIKI CAN BE FOUND HERE](https://github.com/EnjoyYourBan/stuff/wiki)
