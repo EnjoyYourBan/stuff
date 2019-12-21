@@ -1,9 +1,9 @@
 import java.util.*;
-public class Cards {
+public class Deck {
 	Random gen = new Random();
 	List<HashMap> cards = new ArrayList<HashMap>();
 
-	public Cards(Boolean... shuffle) {
+	public Deck(Boolean... shuffle) {
 		boolean shuf = shuffle.length > 0 ? shuffle[0] : true;
 		
 		this.reset(shuf);
